@@ -67,9 +67,6 @@ install_tool() {
             gospider)
                 go install github.com/jaeles-project/gospider@latest
                 ;;
-            crawlergo)
-                go install github.com/yuanyan/crawlergo@latest
-                ;;
             pandoc)
                 sudo apt-get install pandoc
                 ;;
@@ -92,11 +89,6 @@ update_tools() {
         case $tool in
             nuclei)
                 nuclei -update-templates
-                ;;
-            sqlmap)
-                cd ~/tools/sqlmap || exit
-                git pull
-                cd -
                 ;;
             *)
                 print_message "No update available for $tool."
